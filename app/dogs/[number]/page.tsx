@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react';
 import getDogData from '../../../api/getDogData/route';
 import { useParams } from 'next/navigation';
+import { DogType } from '../../../types/type';
 
 export default function Showcase() {
-  const [dogs, setDogs] = useState<any[]>([]);
+  const [dogs, setDogs] = useState<DogType[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
